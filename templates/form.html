@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                form {
+                    background-color: #eee;
+                    padding: 20px;
+                    margin: 0 auto;
+                    width: 540px;
+                    font: 16px sans-serif;
+                    border-radius: 10px;
+                }
+                textarea{
+                    height: 16px;
+                }
+
+            </style>
+        </head>
+        <body>
+        <form method="POST" action ="/check">
+        Signup
+        <br>
+        <br>
+        <br>
+        Username <textarea name = "username" "></textarea>
+        <br>
+        Password <textarea name = "password" "></textarea>
+        <br>
+        Verify Password <textarea name = "vpassword" "></textarea>
+        <br>
+        Email(optional) <textarea name = "optional" "></textarea>
+        <br>
+        <input type = "submit" name="submit" value="Submit">
+        </form>
+        </body>
+    </html>

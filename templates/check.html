@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                form {
+                    background-color: #eee;
+                    padding: 20px;
+                    margin: 0 auto;
+                    width: 540px;
+                    font: 16px sans-serif;
+                    border-radius: 10px;
+                }
+                textarea{
+                    height: 16px;
+                }
+                p{
+                    color:red;
+                    display:inline;
+                    font-style:italic;
+                }
+
+            </style>
+        </head>
+        <body>
+        <form method="POST" action ="/check">
+        Signup
+        <br>
+        Username <textarea id="username" name = "username" ">{{username}}</textarea>         
+        {% if usernameCheck!="" %}
+            <p>{{usernameCheck}}</p>
+        {% endif %}
+        <br>
+        Password <textarea name = "password" "></textarea>
+        {% if passwordCheck!="" %}
+            <p>{{passwordCheck}}</p>
+        {% endif %}
+        <br>
+        Verify Password <textarea name = "vpassword" "></textarea>
+        {% if vpasswordCheck!="" %}
+            <p>{{vpasswordCheck}}</p>
+        {% endif %}
+        <br>
+        Email(optional) <textarea name = "optional" ">{{email}}</textarea>
+        {% if emailCheck!="" %}
+            <p>{{emailCheck}}</p>
+        {% endif %}
+        <br>
+        <input type = "submit" name="submit" value="Submit">
+        </form>
+        </body>
+    </html>
+
+    {%endblock%}
